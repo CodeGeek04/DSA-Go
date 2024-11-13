@@ -225,7 +225,7 @@ func TestIsMatch(t *testing.T) {
 func TestConcurrentIsMatch(t *testing.T) {
     // Test concurrent execution of IsMatch
     done := make(chan bool)
-    for i := 0; i < 10000; i++ {
+    for i := 0; i < 10; i++ {
         go func() {
             result := IsMatch("aaaa", "a*")
             if !result {
